@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Google Sans Flex";
+  src: url("./assets/fonts/GoogleSansFlex_120pt-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans Flex";
+  src: url("./assets/fonts/GoogleSansFlex_120pt-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --rsvp-font-size: 36px;
+  --letter-spacing: 0.02em;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --fg: #e5e5e5;
+  --fg-muted: #666;
+  --surface: #141414;
+  --border: #262626;
+  --orp-color: #ff6b4a;
+  --accent: #60a5fa;
+}
+
+:root[data-theme="light"] {
+  --bg: #fafafa;
+  --fg: #1a1a1a;
+  --fg-muted: #999;
+  --surface: #f0f0f0;
+  --border: #e0e0e0;
+  --orp-color: #ff2d00;
+  --accent: #3b82f6;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+#app {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+::selection {
+  background: var(--accent);
+  color: white;
+}
